@@ -299,6 +299,38 @@ h2 {
 }
 
 .home-tech .tech-tag:hover {
-  background-color: #1E40AF; /* slightly darker on hover */
+  background-color: #1E40AF;
 }
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #F5F5F5;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #1E3A8A;
+    width: 200px;
+    padding: 10px;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
+
 
