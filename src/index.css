@@ -61,14 +61,14 @@ section {
 }
 
 #home {
-  height: 100vh;
+  min-height: calc(100vh - 70px); 
+  background-color: #F5F5F5;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  text-align: center;
+  justify-content: flex-start; 
+  align-items: flex-start;     
+  padding: 60px 20px; 
 }
+
 
 .home-card h1 {
   font-size: 2.5rem;

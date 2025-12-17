@@ -1,9 +1,8 @@
 export default function Home() {
   return (
     <section id="home">
-      <div className="home-card">
-        <h1>Anusha V</h1>
-        <h3>Lead Frontend Developer</h3>
+      <div className="home-card container">
+        <h2>Lead Frontend Developer</h2>
 
         <p>
           Front-end architect and team lead with 10+ years of experience delivering
