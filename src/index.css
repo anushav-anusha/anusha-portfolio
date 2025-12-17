@@ -1,0 +1,254 @@
+/* ---------- Global Styles ---------- */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F5F5F5;
+  color: #111827;
+  scroll-behavior: smooth;
+}
+
+h1,h2,h3,h4 {
+  color: #1E3A8A;
+  margin: 0 0 10px 0;
+}
+
+/* ---------- Navbar ---------- */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1E3A8A;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.nav-container h1 {
+  color: #F5F5F5;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #F5F5F5;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.nav-links li a:hover {
+  color: #F87171;
+}
+
+/* ---------- Sections ---------- */
+section {
+  padding: 100px 20px;
+}
+
+#home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1E3A8A;
+  color: #F5F5F5;
+  text-align: center;
+}
+
+#skills, #projects, #contact {
+  background-color: #FFFFFF;
+  color: #1E3A8A;
+}
+
+#about, #experience, #education {
+  background-color: #F5F5F5;
+  color: #111827;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background-color: #FFFFFF;
+  color: #111827;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+/* ---------- Grid Layout ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* ---------- Skills ---------- */
+.skill-tag {
+  background-color: #1E3A8A;
+  color: #F5F5F5;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin: 5px 5px 0 0;
+  display: inline-block;
+}
+
+/* ---------- Contact ---------- */
+#contact p span {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #F87171;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    background-color: #1E3A8A;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 10px 0;
+    display: none; /* toggle later with hamburger menu if needed */
+  }
+
+  #home h1 {
+    font-size: 2.2rem;
+  }
+
+  #home p {
+    font-size: 1.2rem;
+  }
+
+  #about p {
+    font-size: 1rem;
+  }
+}
+
+p, li, span {
+  line-height: 1.6;
+}
+
+.nav-links li button {
+  background: none;
+  border: none;
+  color: #F5F5F5;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.nav-links li button:hover,
+.nav-links li button.active-link {
+  color: #F87171;
+}
+
+/* Contact Section */
+#contact .plain-text {
+  text-decoration: none;
+  color: #1E3A8A; /* dark blue text */
+  cursor: default; /* not clickable */
+}
+
+#contact a {
+  color: #F87171; /* coral accent */
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#contact a:hover {
+  color: #1E3A8A;
+}
+
+.container {
+  padding: 20px;
+}
+
+h2, h3 {
+  color: #1E3A8A; /* deep blue */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.skill-tag {
+  background-color: #1E3A8A; /* deep blue */
+  color: #F5F5F5;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin: 5px;
+  display: inline-block;
+}
+
+.skill-tag.working {
+  background-color: #F87171; /* coral for working knowledge */
+  font-style: italic;
+}
+
+/* Container, grid, and card styles are shared with Projects */
+.container {
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #1E3A8A;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #F5F5F5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  color: #1E3A8A;
+  margin-bottom: 5px;
+}
+
+.card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+
