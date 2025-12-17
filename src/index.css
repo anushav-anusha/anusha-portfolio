@@ -1,4 +1,4 @@
-/* ---------- Global Styles ---------- */
+
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -9,16 +9,15 @@ body {
 }
 
 h1,h2,h3,h4 {
-  color: #1E3A8A;
+  color: #1D4ED8;
   margin: 0 0 10px 0;
 }
 
-/* ---------- Navbar ---------- */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #1E3A8A;
+  background-color: #1D4ED8;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
@@ -57,7 +56,6 @@ nav {
   color: #F87171;
 }
 
-/* ---------- Sections ---------- */
 section {
   padding: 100px 20px;
 }
@@ -68,14 +66,36 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #1E3A8A;
-  color: #F5F5F5;
+  color: black;
   text-align: center;
 }
 
+.home-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.home-card h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.home-card p {
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+}
+
+.home-tech {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+
 #skills, #projects, #contact {
   background-color: #FFFFFF;
-  color: #1E3A8A;
+  color: #1D4ED8;
 }
 
 #about, #experience, #education {
@@ -98,16 +118,16 @@ section {
   box-shadow: 0 4px 16px rgba(0,0,0,0.2);
 }
 
-/* ---------- Grid Layout ---------- */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
-/* ---------- Skills ---------- */
+
 .skill-tag {
-  background-color: #1E3A8A;
+  background-color: #1D4ED8;
   color: #F5F5F5;
   padding: 5px 10px;
   border-radius: 5px;
@@ -116,25 +136,25 @@ section {
   display: inline-block;
 }
 
-/* ---------- Contact ---------- */
+
 #contact p span {
   text-decoration: underline;
   cursor: pointer;
   color: #F87171;
 }
 
-/* ---------- Responsive ---------- */
+
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
     gap: 10px;
-    background-color: #1E3A8A;
+    background-color: #1D4ED8;
     position: absolute;
     top: 60px;
     right: 0;
     width: 100%;
     padding: 10px 0;
-    display: none; /* toggle later with hamburger menu if needed */
+    display: none; 
   }
 
   #home h1 {
@@ -168,21 +188,21 @@ p, li, span {
   color: #F87171;
 }
 
-/* Contact Section */
+
 #contact .plain-text {
   text-decoration: none;
-  color: #1E3A8A; /* dark blue text */
-  cursor: default; /* not clickable */
+  color: #1D4ED8;
+  cursor: default; 
 }
 
 #contact a {
-  color: #F87171; /* coral accent */
+  color: #1D4ED8;
   text-decoration: underline;
   cursor: pointer;
 }
 
 #contact a:hover {
-  color: #1E3A8A;
+  color: #1D4ED8;
 }
 
 .container {
@@ -190,7 +210,7 @@ p, li, span {
 }
 
 h2, h3 {
-  color: #1E3A8A; /* deep blue */
+  color: #1D4ED8;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -203,7 +223,7 @@ h2, h3 {
 }
 
 .skill-tag {
-  background-color: #1E3A8A; /* deep blue */
+  background-color: #1D4ED8;
   color: #F5F5F5;
   padding: 6px 12px;
   border-radius: 6px;
@@ -213,18 +233,17 @@ h2, h3 {
 }
 
 .skill-tag.working {
-  background-color: #F87171; /* coral for working knowledge */
-  font-style: italic;
+  background-color: #F87171; 
 }
 
-/* Container, grid, and card styles are shared with Projects */
+
 .container {
   padding: 20px;
 }
 
 h2 {
   text-align: center;
-  color: #1E3A8A;
+  color: #1D4ED8;
   margin-bottom: 20px;
 }
 
@@ -242,7 +261,7 @@ h2 {
 }
 
 .card h3 {
-  color: #1E3A8A;
+  color: #1D4ED8;
   margin-bottom: 5px;
 }
 
@@ -251,4 +270,36 @@ h2 {
   padding-left: 20px;
 }
 
+#contact {
+  background-color: #F5F5F5; 
+  padding-bottom: 60px;
+}
+
+#skills {
+  background-color: #F5F5F5; 
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.home-tech {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.home-tech .tech-tag {
+  background-color: #1D4ED8;
+  color: #FFFFFF;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.home-tech .tech-tag:hover {
+  background-color: #1E40AF; /* slightly darker on hover */
+}
 

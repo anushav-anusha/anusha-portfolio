@@ -54,19 +54,6 @@ export default function Experience() {
         "Built prototypes to evaluate multiple design approaches for efficiency and scalability."
       ],
       tech: "Java, HTML, CSS"
-    },
-    {
-      role: "Application Developer",
-      company: "Applied Cybernetics, Bangalore, India",
-      domain: "Telecom / Billing Systems",
-      duration: "May 2012 – Mar 2014",
-      projects: "",
-      bullets: [
-        "Developed JSP/Servlet billing modules using Struts MVC, JavaBeans, and Oracle DB.",
-        "Designed UI layouts and validation flows with Struts Validator.",
-        "Deployed applications on IBM WebSphere with Log4j monitoring."
-      ],
-      tech: "Java, JSP, Servlets, Struts, Oracle"
     }
   ];
 

@@ -4,7 +4,7 @@ export default function Navbar({ activeSection, setActiveSection }) {
   return (
     <nav>
       <div className="nav-container">
-        <h1>Bossbaby</h1>
+        <h1>Anusha</h1>
         <ul className="nav-links">
           {sections.map(sec => (
             <li key={sec}>
