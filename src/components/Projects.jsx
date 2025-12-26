@@ -1,5 +1,20 @@
 const projects = [
   {
+    name: "AI Fitness Assistant – React Project",
+    description: "Built an AI-enabled fitness assistant using React and Next.js, integrating LLM APIs for personalized workout and meal plans.",
+    role: "Personal Project",
+    company: "Self",
+    bullets: [
+      "Implemented dynamic forms and state management using React hooks.",
+      "Integrated AI APIs to generate personalized workout and meal plans based on user input.",
+      "Ensured responsive UI and accessibility compliance.",
+      "Handled API requests, loading states, and error handling gracefully."
+    ],
+    tech: "React, Next.js, JavaScript, TailwindCSS, AI APIs",
+    demo: "https://anushav-anusha.github.io/anusha-portfolio/",
+    github: "https://github.com/anushav-anusha/React-AI-Fitness-App"
+  },
+  {
     name: "FIS Digital Banking – Account Opening",
     description: "Developed secure, scalable account opening workflows for the digital banking platform.",
     role: "Lead Front-End Developer",
@@ -9,7 +24,7 @@ const projects = [
       "Championed security best practices including XSS prevention, CSP, and input sanitization.",
       "Integrated backend services via Java APIs and ensured SSO authentication.",
       "Ensured WCAG accessibility compliance and conducted accessibility audits.",
-      "Mentored and guided a junior engineers, conducted code reviews, and drove coding standards."
+      "Mentored and guided junior engineers, conducted code reviews, and drove coding standards."
     ],
     tech: "Angular 10, TypeScript, Java, Redux, REST APIs"
   },
@@ -50,15 +65,11 @@ const projects = [
       "Led front-end design and architecture using Angular components for maintainable UI.",
       "Integrated multiple backend services and iframe-based systems securely and efficiently.",
       "Implemented analytics, performance monitoring, and accessibility best practices.",
-      "Mentored a junior engineers, conducted code reviews, and enforced coding standards.",
+      "Mentored junior engineers, conducted code reviews, and enforced coding standards.",
       "Optimized modular architecture for maintainability and scalability of banker workflows."
     ],
     tech: "Angular 10, TypeScript, Java, Node.js"
-  }
-];
-
-// Disney and GE projects remain as before
-const otherProjects = [
+  },
   {
     name: "Disney – Build-A-Band Portal",
     description: "Developed a portal for building and managing music bands for events.",
@@ -114,22 +125,54 @@ const otherProjects = [
 ];
 
 export default function Projects() {
-  const allProjects = [...projects, ...otherProjects];
-
   return (
     <section id="projects">
       <div className="container">
         <h2>Projects</h2>
         <div className="grid">
-          {allProjects.map(p => (
+          {projects.map((p) => (
             <div key={p.name} className="card">
-              <h3>{p.name}</h3>
-              <p style={{fontStyle:'italic', marginBottom:'5px'}}>{p.role} – {p.company}</p>
+              <h3>
+               {p.name} {p.company === "Self" && <span className="badge">Personal Project</span>}
+              </h3>
+
+              <h4 style={{ fontStyle: "italic", marginBottom: "5px" }}>
+                {p.role} – {p.company}
+              </h4>
               <p>{p.description}</p>
               <ul>
-                {p.bullets.map((b,i) => <li key={i}>{b}</li>)}
+                {p.bullets.map((b, i) => (
+                  <li key={i}>{b}</li>
+                ))}
               </ul>
-              <p style={{fontSize:'0.8rem', color:'#555', marginTop:'10px'}}>Tech Stack: {p.tech}</p>
+              <p style={{ fontSize: "0.8rem", color: "#555", marginTop: "10px" }}>
+                Tech Stack: {p.tech}
+              </p>
+
+              {p.demo && (
+                <div style={{ marginTop: "8px" }}>
+                  <a
+                    href={p.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-btn"
+                  >
+                    Live Demo
+                  </a>
+                </div>
+              )}
+              {p.github && (
+                <div style={{ marginTop: "4px" }}>
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-btn"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              )}
             </div>
           ))}
         </div>

@@ -25,6 +25,14 @@ const workingKnowledge = [
   "Checkmarx"
 ];
 
+const learningSkills = [
+  "AI with React",
+  "Python",
+  "LLM API integration",
+  "Form-driven AI workflows",
+  "Personalized recommendation engines"
+];
+
 export default function Skills() {
   return (
     <section id="skills">
@@ -43,6 +51,14 @@ export default function Skills() {
             <span key={skill} className="skill-tag working">{skill}</span>
           ))}
         </div>
+
+        <h3>Currently Learning</h3>
+        <div className="skills-container learning">
+          {learningSkills.map(skill => (
+            <span key={skill} className="skill-tag learning">{skill}</span>
+          ))}
+        </div>
+        
       </div>
     </section>
   );
