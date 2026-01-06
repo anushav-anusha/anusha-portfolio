@@ -1,3 +1,8 @@
+import image1 from '../assets/image1.png';
+import image2 from '../assets/image2.png';
+import image3 from '../assets/image3.png';
+import image4 from '../assets/image4.png';
+import image5 from '../assets/image5.png';
 const projects = [
   {
     name: "AI Fitness Assistant – React Project",
@@ -11,8 +16,11 @@ const projects = [
       "Handled API requests, loading states, and error handling gracefully."
     ],
     tech: "React, Next.js, JavaScript, TailwindCSS, AI APIs",
-    demo: "https://anushav-anusha.github.io/anusha-portfolio/",
-    github: "https://github.com/anushav-anusha/React-AI-Fitness-App"
+    demo: "https://react-ai-fitness-app-anusha.vercel.app/",
+    github: "https://github.com/anushav-anusha/React-AI-Fitness-App",
+    assets: [
+      image1, image2, image3, image4, image5
+    ]
   },
   {
     name: "FIS Digital Banking – Account Opening",
@@ -145,9 +153,29 @@ export default function Projects() {
                   <li key={i}>{b}</li>
                 ))}
               </ul>
+
               <p style={{ fontSize: "0.8rem", color: "#555", marginTop: "10px" }}>
                 Tech Stack: {p.tech}
               </p>
+
+              
+              {p.assets && (
+                <div className="project-screenshots" style={{ margin: "10px 0" }}>
+                  {p.assets.map((img, idx) => (
+                    <img
+                      key={idx}
+                      src={img}
+                      alt={`${p.name} screenshot ${idx + 1}`}
+                      style={{
+                        width: "100%",
+                        maxWidth: "400px",
+                        marginBottom: "8px",
+                        borderRadius: "5px"
+                      }}
+                    />
+                  ))}
+                </div>
+              )}
 
               {p.demo && (
                 <div style={{ marginTop: "8px" }}>
@@ -161,6 +189,7 @@ export default function Projects() {
                   </a>
                 </div>
               )}
+              
               {p.github && (
                 <div style={{ marginTop: "4px" }}>
                   <a
